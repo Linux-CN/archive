@@ -3,3 +3,11 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = "mainroad"
 
+[Params.logo]
+  title = "Linux.cn Archive"
+  subtitle = "Linux 中国归档站"
+[Params.widgets.search]
+  url = "https://google.com/search"
+  [Params.widgets.search.input]
+    name = "sitesearch"
+    pre = ""
