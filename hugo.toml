@@ -1,12 +1,13 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://archive.linux.cn/'
+languageCode = 'zh-Hans'
+title = 'Linux.cn Archive'
 theme = "mainroad"
 uglyURLs = true
 
-[permalinks]
-[permalinks.term]
-  tags = '/article-:filename-1.html'
 [Params.logo]
   title = "Linux.cn Archive"
-
+[Params.sidebar]
+  home = "right"
+  list = "right"
+  single = "right"
+  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
