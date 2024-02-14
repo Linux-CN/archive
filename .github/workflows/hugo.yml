@@ -53,26 +53,12 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v2
-      #   with:
-      #     path: ./public
-      - name: "upload"
-        uses: vesoft-inc/upload-oss@master
+      - name: FTP Deployer
+        uses: sand4rt/ftp-deployer@v1.7
         with:
-            key-id: ${{ secrets.OSS_KEY_ID }}
-            key-secret: ${{ secrets.OSS_KEY_SECRET }}
-            endpoint: ${{ secrets.OSS_ENDPOINT }}
-            bucket: ${{ secrets.OSS_REGION }}
-            asset-path: ./public
-            target-path: /
-      # - name: Upload to oss
-      #   id: upload_to_oss
-      #   uses: tvrcgo/oss-action@master
-      #   with:
-      #     key-id: ${{ secrets.OSS_KEY_ID }}
-      #     key-secret: ${{ secrets.OSS_KEY_SECRET }}
-      #     region:  ${{ secrets.OSS_REGION }}
-      #     bucket:  ${{ secrets.OSS_BUCKET }}
-      #     assets: |
-      #       public/*:/
+          host: sg.storage.bunnycdn.com
+          username: linuxcn
+          password: ${{ secrets.FTP_PASSWORD }} # FTP password
+          local_folder: public 
+          cleanup: true 
+          passive: true
