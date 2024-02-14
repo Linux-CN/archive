@@ -53,12 +53,15 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
-      - name: FTP Deployer
-        uses: sand4rt/ftp-deployer@v1.7
+      - name: Deploy to BunnyCDN
+        uses: ayeressian/bunnycdn-storage-deploy@v2.2.0
         with:
-          host: sg.storage.bunnycdn.com
-          username: linuxcn
-          password: ${{ secrets.FTP_PASSWORD }} # FTP password
-          local_folder: public 
-          cleanup: true 
-          passive: true
+          source: "public"
+          destination: "."
+          storageZoneName: "${{ secrets.BUNNY_ZONE }}"
+          storagePassword: "${{ secrets.BUNNY_PASSWORD }}"
+          accessKey: "${{ secrets.BUNNY_STORAGE_KEY }}"
+          pullZoneId: "${{ secrets.BUNNY_PULLZONE_ID }}"
+          upload: "true"
+          remove: "true"
+          purgePullZone: "true"
