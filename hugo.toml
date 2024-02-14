@@ -2,12 +2,11 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = "mainroad"
+uglyURLs = true
 
+[permalinks]
+[permalinks.term]
+  tags = '/article-:filename-1.html'
 [Params.logo]
   title = "Linux.cn Archive"
-  subtitle = "Linux 中国归档站"
-[Params.widgets.search]
-  url = "https://google.com/search"
-  [Params.widgets.search.input]
-    name = "sitesearch"
-    pre = ""
+
