@@ -60,4 +60,4 @@ jobs:
           storageZoneName: "${{ secrets.BUNNY_ZONE }}"
           storagePassword: "${{ secrets.BUNNY_PASSWORD }}"
           upload: "true"
-          remove: "true"
+          storageEndpoint: "sg.storage.bunnycdn.com"
