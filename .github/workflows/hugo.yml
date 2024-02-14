@@ -57,3 +57,13 @@ jobs:
       #   uses: actions/upload-pages-artifact@v2
       #   with:
       #     path: ./public
+      - name: Upload to oss
+        id: upload_to_oss
+        uses: tvrcgo/oss-action@master
+        with:
+          key-id: ${{ secrets.OSS_KEY_ID }}
+          key-secret: ${{ secrets.OSS_KEY_SECRET }}
+          region:  ${{ secrets.OSS_REGION }}
+          bucket:  ${{ secrets.OSS_BUCKET }}
+          assets: |
+            public/*:/
