@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="-20 -20 840 840" xmlns="http://www.w3.org/2000/svg"><title>How system calls sit between applications and the kernel</title><style type="text/css">.arrow {
+        fill: none;
+        stroke: #000;
+        stroke-width: 4;
+        stroke-linecap: round;
+        marker-end: url(#arrow);
+    }
+
+    rect.box {
+        fill: #cff;
+        stroke: #000;
+        stroke-width: 1;
+    }
+
+    .protection {
+        stroke: #f00;
+        stroke-width: 2;
+    }
+
+    rect.syscalls {
+        fill: #acf;
+    }
+
+    text.syscalls {
+        font-size: 32pt;
+    }
+
+    text.libc {
+        font-size: 20pt;
+        text-anchor: start;
+        text-align: left;
+    }
+
+    text.app {
+        font-size: 16pt;
+    }
+
+    rect.hardware {
+        fill: #fca;
+    }
+
+    text {
+        font-family: Merriweather;
+        stroke: #000;
+        text-anchor: middle;
+        text-align: center;
+        dominant-baseline: middle;
+        font-size: 36pt;
+    }</style><defs><marker id="arrow" markerHeight="12" markerWidth="12" orient="auto" refX="2" refY="1" viewBox="0 0 2 2"><path d="m2 1-2-1 1 1-1 1z"/></marker></defs><rect id="hardware" class="box hardware" x="150" y="700" width="500" height="100"/><text class="hardware" x="400" y="750">Hardware</text><rect id="kernel" class="box" x="160" y="600" width="480" height="100"/><text class="kernel" x="400" y="670">Kernel</text><rect id="libc" class="box" x="170" y="550" width="460" height="50"/><text class="libc" x="640" y="575">libc</text><path class="protection" d="m100 600h600"/><rect class="box app" x="180" width="110" height="550"/><rect class="box app" x="290" width="110" height="550"/><rect class="box app" x="400" width="110" height="550"/><rect class="box app" x="510" width="110" height="550"/><text class="app" x="235" y="275">App 1</text><text class="app" x="345" y="275">App 2</text><text class="app" x="455" y="275">App 3</text><text class="app" x="565" y="275">App 4</text><path class="arrow" d="m235 500v250"/><path class="arrow" d="M235 500V350"/><path class="arrow" d="m565 500v250"/><path class="arrow" d="M565 500V350"/><rect id="syscalls" class="box syscalls" x="180" y="570" width="440" height="60"/><text class="syscalls" x="400" y="600">System Calls</text></svg>
