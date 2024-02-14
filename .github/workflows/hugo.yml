@@ -59,8 +59,5 @@ jobs:
           source: "public"
           storageZoneName: "${{ secrets.BUNNY_ZONE }}"
           storagePassword: "${{ secrets.BUNNY_PASSWORD }}"
-          accessKey: "${{ secrets.BUNNY_STORAGE_KEY }}"
-          pullZoneId: "${{ secrets.BUNNY_PULLZONE_ID }}"
           upload: "true"
           remove: "true"
-          purgePullZone: "true"
