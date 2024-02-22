@@ -8,10 +8,16 @@ paginate = 50
 opengraph = true # Enable OpenGraph if true
 schema = true # Enable Schema
 readmore = true # Show "Read more" button in list if true
+post_meta = ["author", "date"]
 [Params.logo]
   title = "Linux.cn Archive"
 [Params.thumbnail]
   visibility = ["list", "post"] # Control thumbnail visibility
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']
 [menus]
 [[menus.main]]
     name = 'Home'
@@ -26,6 +32,11 @@ readmore = true # Show "Read more" button in list if true
     name = 'Tags'
     pageRef = '/tags/'
     weight = 30
+
+[[menus.main]]
+    name = 'RSS'
+    pageRef = '/index.xml'
+    weight = 40
 
 [taxonomies]
   category = 'categories'
