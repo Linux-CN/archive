@@ -2,7 +2,7 @@ baseURL = 'https://archive.linux.cn/'
 languageCode = 'zh-Hans'
 title = 'Linux.cn Archive'
 theme = "mainroad"
-uglyURLs = true
+uglyURLs = false
 paginate = 50
 [Params]
 opengraph = true # Enable OpenGraph if true
