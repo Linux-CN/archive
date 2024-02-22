@@ -1,13 +1,41 @@
 {{- if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
 <div class="pagination">
 	{{- if .Paginator.HasPrev }}
-	<a class="pagination__item pagination__item--prev btn" href="{{ .Paginator.Prev.URL }}">«</a>
+	<a
+		class="pagination__item pagination__item--prev btn"
+		href="{{ .Paginator.Prev.URL }}"
+		>«</a
+	>
 	{{- end }}
-	<span class="pagination__item pagination__item--current">
-		{{- .Paginator.PageNumber }}/{{ .Paginator.TotalPages -}}
+	<span class="pagination__item pagination__item--current pagination_to__page">
+		<form onsubmit="jumpToPage(); return false;" style="display: inline-flex">
+			<input
+				value="{{ .Paginator.PageNumber }}"
+				type="number"
+				id="page-input"
+				min="1"
+				max="{{ .Paginator.TotalPages }}"
+				required
+			/>
+		</form>
+		/{{ .Paginator.TotalPages -}}
 	</span>
 	{{- if .Paginator.HasNext }}
-	<a class="pagination__item pagination__item--next btn" href="{{ .Paginator.Next.URL }}">»</a>
+	<a
+		class="pagination__item pagination__item--next btn"
+		href="{{ .Paginator.Next.URL }}"
+		>»</a
+	>
 	{{- end }}
 </div>
+<script>
+	function jumpToPage() {
+	    var pageInput = document.getElementById("page-input");
+	    var pageNumber = parseInt(pageInput.value);
+	    if (pageNumber >= 1 && pageNumber <= {{ .Paginator.TotalPages }}) {
+	        var targetURL = "{{ .Site.BaseURL }}page/" + pageNumber + "/";
+	        window.location.href = targetURL;
+	    }
+	}
+</script>
 {{- end }}
