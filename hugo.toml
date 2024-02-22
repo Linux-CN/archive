@@ -18,9 +18,14 @@ readmore = true # Show "Read more" button in list if true
     pageRef = '/'
     weight = 10
 [[menus.main]]
-    name = 'Tags'
-    pageRef = '/tags.html'
+    name = 'Categories'
+    pageRef = '/categories/'
     weight = 20
+
+[[menus.main]]
+    name = 'Tags'
+    pageRef = '/tags/'
+    weight = 30
 
 [taxonomies]
   category = 'categories'
