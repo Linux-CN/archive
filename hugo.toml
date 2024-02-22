@@ -8,7 +8,6 @@ paginate = 50
 opengraph = true # Enable OpenGraph if true
 schema = true # Enable Schema
 readmore = true # Show "Read more" button in list if true
-authorbox = true # Show authorbox at bottom of pages if true
 [Params.logo]
   title = "Linux.cn Archive"
 [Params.thumbnail]
@@ -22,3 +21,7 @@ authorbox = true # Show authorbox at bottom of pages if true
     name = 'Tags'
     pageRef = '/tags.html'
     weight = 20
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
