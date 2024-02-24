@@ -10,6 +10,7 @@
 ### 社区镜像站
 
 - [麟悦](https://Linuxjoy.com)
+- [LinuxCat](https://linuxcat.top)
 
 
 ### 社区电子书
