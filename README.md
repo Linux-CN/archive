@@ -10,6 +10,7 @@
 ### 社区镜像站
 
 - [麟悦](https://Linuxjoy.com)
+- [Linux中国 - 泡网](https://paonet.com/u/linux-cn)
 
 
 ### 社区电子书
