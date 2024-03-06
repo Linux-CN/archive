@@ -11,6 +11,9 @@
 
 - [麟悦](https://Linuxjoy.com)
 - [Linux中国 - 泡网](https://paonet.com/linux-cn)
+- [蚊章汇](https://linuxcn.bwsl.wang)
+- [Linux中国存档](https://www.4uref.com/zh/linux-cn/)
+- [LinuxCat](https://linuxcat.top)
 
 
 ### 社区电子书
