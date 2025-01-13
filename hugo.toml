@@ -1,4 +1,4 @@
-baseURL = 'https://linux.cn/'
+baseURL = 'https://www.linux.cn/'
 languageCode = 'zh-Hans'
 title = 'Linux.cn Archive'
 theme = "mainroad"
