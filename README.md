@@ -33,11 +33,15 @@
 - [Linux中国存档](https://www.4uref.com/zh/linux-cn/)
 - [LinuxCat](https://linuxcat.top)
 - [RTS-Linux](http://rts.cn/linux/)
+- [归墟星火集](https://linuxcn.undefined.today)
 
 
 ### 社区电子书
 
 - 待提交
+
+### 批量替换文章中的图片引用为CDN形式
+文章图文并茂，且数量很多，手动替换并不现实。你可以使用仓库内的 `cdn_image.py` 脚本批量替换，使用方法是：`python3 cdn_image.py 文章文件夹路径 你要替换的CDN链接`。
 
 ## LICENSE
 
