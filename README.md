@@ -34,6 +34,7 @@
 - [LinuxCat](https://linuxcat.top)
 - [RTS-Linux](http://rts.cn/linux/)
 - [归墟星火集](https://linuxcn.undefined.today)
+- [Linux中国 - LinuxStory](https://linuxstory.org/linux_cn/)
 
 
 ### 社区电子书
